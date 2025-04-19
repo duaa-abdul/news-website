@@ -37,15 +37,18 @@ const Business = () => {
               )}
               <div className="card-body">
                 <h5 className="card-title">{news?.title?.slice(0, 60)}</h5>
-                <p className="card-text">{news?.description?.slice(0, 100)}...</p>
-                <Button
+                <p className="card-text">{news?.description}...</p>
+                {/* <Button
+                id={news?.id}
                   href={news.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   Read Full News
-                </Button>
+                </Button> */}
+                <Button id={encodeURIComponent(news.title)} />
+
               </div>
             </div>
           </div>
@@ -56,3 +59,4 @@ const Business = () => {
 };
 
 export default Business;
+

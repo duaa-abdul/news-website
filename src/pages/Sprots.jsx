@@ -39,6 +39,7 @@ const Business = () => {
                 <h5 className="card-title">{news?.title?.slice(0, 60)}</h5>
                 <p className="card-text">{news?.description?.slice(0, 100)}...</p>
                 <Button
+                id={news?.id}
                   href={news.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -46,6 +47,7 @@ const Business = () => {
                 >
                   Read Full News
                 </Button>
+    
               </div>
             </div>
           </div>

@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import Button from '../Components/Button';
 
@@ -11,8 +9,8 @@ const Politics = () => {
         try {
             const response = await fetch(`https://newsapi.org/v2/everything?q=pakistan&apiKey=${apiKey}`);
             const jsonData = await response.json();
-            console.log(jsonData);
-            setSearch(jsonData.articles); // ✅ correct key
+            // console.log(jsonData);
+            setSearch(jsonData.articles);
         } catch (error) {
             console.log(error);
         }
